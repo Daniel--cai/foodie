@@ -3,7 +3,7 @@ const webpack = require('webpack')
 module.exports = {
     //input
     entry: './src/',
-
+    mode: 'development', 
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
@@ -18,29 +18,24 @@ module.exports = {
                 exclude: /node_modules/,
                 loaders: ['ts-loader']
             },
-            {
-                test: /\.(png|jpg)$/,
-                loader: 'url-loader',
-                exclude: /node_modules/
-            },
-            {
-                type: 'javascript/auto',
-                test: /\.mjs$/,
-                use: []
-            },
-            {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    {
-                        loader: 'css-loader',
-                        query: {
-                            modules: true,
-                            localIdentName: '[local]'
-                        }
-                    }
-                ]
-            }
+            // {
+            //     test: /\.(png|jpg)$/,
+            //     loader: 'url-loader',
+            //     exclude: /node_modules/
+            // },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         'style-loader',
+            //         {
+            //             loader: 'css-loader',
+            //             query: {
+            //                 modules: true,
+            //                 localIdentName: '[local]'
+            //             }
+            //         }
+            //     ]
+            // }
 
         ]
     },
