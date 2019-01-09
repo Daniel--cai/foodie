@@ -4,6 +4,26 @@ const CoffeeTypes = [
         type: "Cappuccino",
         description: "sdfsdf"
     },
+    {
+        img: "../assets/espresso.svg",
+        type: "Cappuccino",
+        description: "sdfsdf"
+    },
+    {
+        img: "../assets/espresso.svg",
+        type: "Cappuccino",
+        description: "sdfsdf"
+    },
+    {
+        img: "../assets/espresso.svg",
+        type: "Cappuccino",
+        description: "sdfsdf"
+    },
+    {
+        img: "../assets/espresso.svg",
+        type: "Cappuccino",
+        description: "sdfsdf"
+    },
 ]
 
 export default CoffeeTypes
