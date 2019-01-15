@@ -1,16 +1,28 @@
 import * as React from "react";
-const CoffeeType = (props: {
+import { withRouter } from "react-router";
+
+interface Props {
   img: string;
   type: string;
   description: string;
-}) => (
-  <tr className="">
-    <td>
-      <img className="menu-item-img" src={props.img} />
-    </td>
-    <td className="is-vertical-align">
-      <span className="is-4 title">{props.type}</span>
-    </td>
-  </tr>
-);
-export default CoffeeType;
+}
+class CoffeeType extends React.Component<any, any> {
+  render() {
+    return (
+      <tr
+        className="menu-item"
+        onClick={() => this.props.history.push(`/customise`)}
+      >
+        <td className="menu-item-img">
+          <img className="" src={this.props.img} />
+        </td>
+        <td className="is-vertical-align">
+          <span className="">
+            <b>{this.props.type}</b>
+          </span>
+        </td>
+      </tr>
+    );
+  }
+}
+export default withRouter(CoffeeType);

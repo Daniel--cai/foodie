@@ -1,7 +1,39 @@
 @import "bulma";
 
+* {
+  color: #444444;
+}
+
+.header {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0.5em 0.75em;
+  color: $dark-brown;
+}
+
+.has-text-primary-dark {
+  color: $primary-dark;
+}
+
+.login-input {
+  border: 0;
+  border-bottom: solid 2px #dbdbdb;
+  border-radius: 0;
+}
+
+.login-input:focus {
+  border-color: $primary;
+}
+
 .menu-item-img {
   width: 50px;
+}
+
+.is-invisible {
+  visibility: hidden;
+}
+
+.has-no-bottom-margin {
+  margin-bottom: 0 !important;
 }
 
 .is-vertical-align {
@@ -37,7 +69,6 @@
   bottom: 0;
   width: 100%;
   z-index: 100;
-  background-color: #ff4d4d;
 }
 
 .sticky-footer-placeholder {
