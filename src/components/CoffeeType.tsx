@@ -4,9 +4,13 @@ const CoffeeType = (props: {
   type: string;
   description: string;
 }) => (
-  <div>
-    <img src={props.img} width="100%" />
-    <b>{props.type} </b>
-  </div>
+  <tr className="">
+    <td>
+      <img className="menu-item-img" src={props.img} />
+    </td>
+    <td className="is-vertical-align">
+      <span className="is-4 title">{props.type}</span>
+    </td>
+  </tr>
 );
 export default CoffeeType;

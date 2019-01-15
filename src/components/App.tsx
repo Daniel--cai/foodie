@@ -10,13 +10,13 @@ export default class App extends React.Component<any, any> {
     return (
       <div>
         <CoffeeOrder coffeeTypes={CoffeeTypes} />
-        {Customisations.map(customisation => (
+        {/* {Customisations.map(customisation => (
           <CustomiseOrder
             header={customisation.header}
             values={customisation.values}
           />
         ))}
-        <OrderFooter />
+        <OrderFooter /> */}
       </div>
     );
   }
