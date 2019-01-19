@@ -5,12 +5,21 @@ import OrderFooter from "./OrderFooter";
 export default () => {
   return (
     <React.Fragment>
-      {Customisations.map(customisation => (
-        <CustomiseOrder
-          header={customisation.header}
-          values={customisation.values}
-        />
-      ))}
+      <table className="table is-fullwidth">
+        <tbody>
+          {Customisations.map(customisation => (
+            <tr>
+              <td>
+                <CustomiseOrder
+                  header={customisation.header}
+                  values={customisation.values}
+                />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <OrderFooter />
     </React.Fragment>
   );

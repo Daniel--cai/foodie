@@ -1,32 +1,28 @@
 const Customisation = [
-    {
-        header: "Milk",
-        values: ["Full Cream", "Skim", "Soy", "Almond"]
-    },
-    {
-        header: "Sugar",
-        values: ["0", "1", "2", "3", "1/2"]
-    },
-    {
-        header: "Strength",
-        values: ["Regular", "Double Shot", "Weak"]
-    },
-    {
-        header: "Size",
-        values: ["Large", "Regular"]
-    },
-    {
-        header: "Temperature",
-        values: ["Normal", "Extra Hot", "Warm"]
-    },
-    {
-        header: "Flavouring",
-        values: ["None", "Caramel", "Hazelnut"]
-    },
-    {
-        header: "Decaf",
-        values: ["None", "Decaf"]
-    }
-]
+  {
+    header: "Milk",
+    values: ["Full Cream", "Skim", "Soy", "Almond"]
+  },
+  {
+    header: "Sugar",
+    values: ["1/2", "1", "2", "3"]
+  },
+  {
+    header: "Strength",
+    values: ["Weak", "Regular", "Double Shot", "Decaf"]
+  },
+  {
+    header: "Size",
+    values: ["Small", "Large", "Regular", "BYO"]
+  },
+  {
+    header: "Temp",
+    values: ["Normal", "Extra Hot", "Warm", ""]
+  },
+  {
+    header: "Flavour",
+    values: ["Honey", "Caramel", "Hazelnut", ""]
+  }
+];
 
-export default Customisation
+export default Customisation;

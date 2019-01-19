@@ -1,10 +1,14 @@
 import * as React from "react";
-export default () => {
+import { withRouter, RouteComponentProps } from "react-router";
+
+interface Props extends RouteComponentProps {}
+
+const Header = (props: Props) => {
   return (
     <React.Fragment>
       <div className="header is-5 has-no-bottom-margin">
         <div className="level is-mobile">
-          <div className="level-left">
+          <div className="level-left" onClick={() => props.history.goBack()}>
             <div className="level-item">
               <span className="icon ">
                 <i className="fas fa-chevron-left" />
@@ -26,3 +30,5 @@ export default () => {
     </React.Fragment>
   );
 };
+
+export default withRouter(Header);
