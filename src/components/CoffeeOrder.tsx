@@ -1,7 +1,6 @@
 import * as React from "react";
 import CoffeeType from "./CoffeeType";
 import CoffeeTypes from "../constants/CoffeeTypes";
-import { Icon, Label } from "semantic-ui-react";
 
 export default () => {
   return (
@@ -13,6 +12,7 @@ export default () => {
               img={coffeeType.img}
               type={coffeeType.type}
               description={coffeeType.description}
+              key={coffeeType.type}
             />
           ))}
         </tbody>

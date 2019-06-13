@@ -14,11 +14,16 @@ class CoffeeType extends React.Component<any, any> {
         onClick={() => this.props.history.push(`/customise`)}
       >
         <td className="menu-item-img">
-          <img className="" src={this.props.img} />
+          <img className="is-vertical-align" src={this.props.img} />
         </td>
         <td className="is-vertical-align">
           <span className="">
             <b>{this.props.type}</b>
+          </span>
+        </td>
+        <td className="is-vertical-align has-text-right	">
+          <span className="icon ">
+            <i className="fas fa-chevron-right" />
           </span>
         </td>
       </tr>

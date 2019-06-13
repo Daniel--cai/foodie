@@ -25,12 +25,12 @@ module.exports = {
           fallback: "style-loader",
           use: ["css-loader", "sass-loader"]
         })
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: "url-loader",
+        exclude: /node_modules/
       }
-      // {
-      //     test: /\.(png|jpg)$/,
-      //     loader: 'url-loader',
-      //     exclude: /node_modules/
-      // },
     ]
   },
   devtool: "source-map",
