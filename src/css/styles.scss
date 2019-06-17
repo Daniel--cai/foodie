@@ -2,6 +2,7 @@
 
 * {
   color: #444444;
+  box-sizing: border-box;
 }
 
 #app {
@@ -30,9 +31,16 @@
   border-color: $primary;
 }
 
-.menu-item-img {
+.menu-item {
+  &:active,
+  &:focus {
+    background: #f4ede9;
+  }
+}
+
+.menu-item__img {
   width: 70px;
-  padding: 0.5em !important;
+  padding: 0.75em !important;
 }
 
 .is-invisible {
@@ -149,22 +157,21 @@
 
 .selected {
   img {
-    margin: 25px 125px;
-    border: solid white 5px;
+    border: solid white 10px;
     border-radius: 100%;
+    width: 125px;
   }
 
   background: url("../assets/pattern.jpg");
+  background-size: cover;
+  text-align: center;
 }
 
 .customise__panel {
   overflow-y: auto;
   display: flex;
-
-  table {
-    flex: 1;
-    margin-bottom: 25px;
-  }
+  flex-direction: column;
+  margin-bottom: 125px;
 }
 
 .icon-img {
@@ -185,12 +192,44 @@
 
 .customise__labels--active {
   background: #f4ede9;
+  font-weight: bold;
 }
 .customise__labels--disabled {
 }
 
 .customise__row {
+  display: flex;
+  flex: 1;
+  padding: 0.75em 0.25em;
+  flex-direction: row;
+  border-bottom: solid 1px #dedede;
+  align-items: stretch;
+}
+.customise__row__heading {
+  width: 20%;
+  text-align: center !important;
+}
+
+.customise__row__options {
   align-self: center;
   display: flex;
   text-align: center;
+  flex: 1;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffettype__panel {
+  overflow-y: auto;
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  // background: #ff0000;
 }

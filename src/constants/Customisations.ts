@@ -6,7 +6,7 @@ const Customisation = [
   },
   {
     header: "Sugar",
-    values: ["1/2", "1", "2", "3"],
+    values: ["0", "1/2", "1", "2", "3"],
     img: "../assets/svg/sugar.svg"
   },
   {
@@ -21,12 +21,17 @@ const Customisation = [
   },
   {
     header: "Temp",
-    values: ["Normal", "Warm", "Extra Hot"],
+    values: ["Normal", "Warm", "Hot"],
     img: "../assets/svg/coffee-cup-7.svg"
   },
   {
     header: "Flavour",
-    values: ["Honey", "Caramel", "Hazelnut"],
+    values: ["None", "Honey", "Caramel"],
+    img: "../assets/svg/coffee-cup-7.svg"
+  },
+  {
+    header: "Dash",
+    values: ["Cold Water", "Cream"],
     img: "../assets/svg/coffee-cup-7.svg"
   }
 ];

@@ -23,6 +23,16 @@ const CoffeeTypes = [
     img: "../assets/svg/coffee-cup-7.svg",
     type: "Flat White",
     description: "sdfsdf"
+  },
+  {
+    img: "../assets/svg/coffee-cup-7.svg",
+    type: "Chai Latte",
+    description: "sdfsdf"
+  },
+  {
+    img: "../assets/svg/coffee-cup-7.svg",
+    type: "Long Black",
+    description: "sdfsdf"
   }
 ];
 

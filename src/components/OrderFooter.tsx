@@ -1,9 +1,17 @@
 import * as React from "react";
-export default () => {
+import classnames from "classnames";
+
+interface OrderFooterProps {
+  isScrollable: boolean;
+}
+export default (props: OrderFooterProps) => {
   return (
     <React.Fragment>
-      <div className="sticky-footer-placeholder" />
-      <footer className="sticky-footer sticky-footer--scrollable">
+      <footer
+        className={classnames("sticky-footer", {
+          "sticky-footer--scrollable": !props.isScrollable
+        })}
+      >
         <button className="button is-primary is-fullwidth is-rounded is-large">
           Order
         </button>

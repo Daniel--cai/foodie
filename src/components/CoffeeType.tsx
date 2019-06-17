@@ -13,7 +13,7 @@ class CoffeeType extends React.Component<any, any> {
         className="menu-item"
         onClick={() => this.props.history.push(`/customise`)}
       >
-        <td className="menu-item-img">
+        <td className="menu-item__img">
           <img className="is-vertical-align" src={this.props.img} />
         </td>
         <td className="is-vertical-align">
