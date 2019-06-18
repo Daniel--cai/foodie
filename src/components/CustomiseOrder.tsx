@@ -1,40 +1,38 @@
-import * as React from "react";
-import * as Customisation from "../constants/Customisations";
-interface Props {
-  header: string;
-  values: string[];
-  img: string;
+import React, { useState, Fragment, useContext } from "react";
+import CustomisationType, { Customisation } from "../constants/Customisations";
+import classnames from "classnames";
+
+interface Props extends Customisation {
+  value: string;
+  onClick: (value: string) => void;
 }
 
-interface State {}
-
-export default class CustomiseOrder extends React.Component<Props, any> {
-  state: {
-    selected: {};
-  };
-  render() {
-    return (
-      <React.Fragment>
-        <div className="customise__row">
-          <div className="customise__row__heading">
-            <div>
-              <img src={this.props.img} className="icon-img" />
-            </div>
-            <b className="has-text-primary-dark">{this.props.header}</b>
+export const CustomiseOrder = (props: Props) => {
+  return (
+    <Fragment>
+      <div className="customise__row">
+        <div className="customise__row__heading">
+          <div>
+            <img src={props.img} className="icon-img" />
           </div>
-          <div className="customise__row__options">
-            {this.props.values.map((value, index) => {
-              if (index == 2)
-                return (
-                  <div className="customise__labels customise__labels--active">
-                    {value}
-                  </div>
-                );
-              return <div className="customise__labels">{value}</div>;
-            })}
-          </div>
+          <b className="has-text-primary-dark">{props.header}</b>
         </div>
-      </React.Fragment>
-    );
-  }
-}
+        <div className="customise__row__options">
+          {props.values.map((value, index) => {
+            return (
+              <div
+                className={classnames("customise__labels", {
+                  "customise__labels--active": value === props.value
+                })}
+                onClick={() => props.onClick(value)}
+                key={value}
+              >
+                {value}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </Fragment>
+  );
+};

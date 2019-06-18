@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CaseSensitivePathPlugin = require("case-sensitive-paths-webpack-plugin");
 
 module.exports = {
   entry: "./src/",
@@ -51,7 +52,8 @@ module.exports = {
       "process.env": {
         NODE_ENV: JSON.stringify("development")
       }
-    })
+    }),
+    new CaseSensitivePathPlugin()
   ]
   //server
 };

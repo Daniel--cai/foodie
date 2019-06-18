@@ -13,8 +13,24 @@
 
 .header {
   border-bottom: 1px solid #dbdbdb;
-  padding: 0.5em 0.75em;
+  padding: 0.75em 0.75em;
   color: $dark-brown;
+  display: flex;
+}
+
+.header__left,
+.header__center,
+.header__right {
+  flex: 1;
+}
+
+.header__left {
+}
+.header__center {
+  text-align: center;
+}
+
+.header__right {
 }
 
 .has-text-primary-dark {
@@ -167,6 +183,12 @@
   text-align: center;
 }
 
+@media all and (orientation: landscape) {
+  .selected {
+    display: none;
+  }
+}
+
 .customise__panel {
   overflow-y: auto;
   display: flex;
@@ -181,7 +203,7 @@
 .customise__labels {
   display: inline-block;
   padding: 0 10px;
-
+  text-transform: capitalize;
   border-radius: 25px;
   flex: 1;
   align-self: stretch;
@@ -207,7 +229,8 @@
 }
 .customise__row__heading {
   width: 20%;
-  text-align: center !important;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .customise__row__options {

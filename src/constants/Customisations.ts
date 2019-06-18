@@ -1,39 +1,56 @@
-const Customisation = [
+export type CustomisationType =
+  | "milk"
+  | "sugar"
+  | "strength"
+  | "size"
+  | "temp"
+  | "flavour"
+  | "dash";
+
+export interface Customisation {
+  header: CustomisationType;
+  values: string[];
+  img: string;
+}
+
+export type CustomisationTypeArray = { [P in CustomisationType]: string };
+
+const customisation: Customisation[] = [
   {
-    header: "Milk",
-    values: ["Full", "Skim", "Soy", "Almond"],
+    header: "milk",
+    values: ["full", "skim", "soy", "almond"],
     img: "../assets/svg/coffee-cup-7.svg"
   },
   {
-    header: "Sugar",
+    header: "sugar",
     values: ["0", "1/2", "1", "2", "3"],
     img: "../assets/svg/sugar.svg"
   },
   {
-    header: "Strength",
-    values: ["Weak", "Regular", "Double", "Decaf"],
+    header: "strength",
+    values: ["weak", "regular", "double", "decaf"],
     img: "../assets/svg/coffee-cup-7.svg"
   },
   {
-    header: "Size",
-    values: ["Small", "Regular", "Large", "BYO"],
+    header: "size",
+    values: ["small", "regular", "large", "byo"],
     img: "../assets/svg/coffee-cup-7.svg"
   },
   {
-    header: "Temp",
-    values: ["Normal", "Warm", "Hot"],
+    header: "temp",
+    values: ["normal", "warm", "hot"],
     img: "../assets/svg/coffee-cup-7.svg"
   },
   {
-    header: "Flavour",
-    values: ["None", "Honey", "Caramel"],
+    header: "flavour",
+    values: ["none", "honey", "caramel"],
     img: "../assets/svg/coffee-cup-7.svg"
   },
   {
-    header: "Dash",
-    values: ["Cold Water", "Cream"],
+    header: "dash",
+    values: ["none", "water", "cream"],
     img: "../assets/svg/coffee-cup-7.svg"
   }
 ];
 
-export default Customisation;
+export default customisation;

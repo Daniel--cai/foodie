@@ -1,10 +1,14 @@
 import * as React from "react";
 import classnames from "classnames";
 
-export default () => {
+interface Props {
+  count: number;
+}
+
+export default (props: Props) => {
   return (
     <React.Fragment>
-      <footer className="sticky-footer">20 Coffees brewing</footer>
+      <footer className="sticky-footer">{props.count} coffees brewing</footer>
     </React.Fragment>
   );
 };

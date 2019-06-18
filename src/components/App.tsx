@@ -10,7 +10,6 @@ const App = () => {
   return (
     <Router>
       <React.Fragment>
-        <Header />
         <Route path="/login" component={Login} />
         <Route path="/customise" component={CoffeeCustomisation} />
         <Route path="/" exact component={CoffeeOrder} />
